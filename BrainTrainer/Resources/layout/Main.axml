@@ -4,16 +4,6 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <Button
-        android:text="GO!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonStart"
-        android:padding="40dp"
-        android:layout_centerInParent="true"
-        android:textSize="80sp"
-        android:backgroundTint="#ff0eff31"
-        android:visibility="invisible" />
     <TextView
         android:text="30s"
         android:textSize="30sp"
@@ -48,13 +38,14 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/gridLayout1"
+        android:id="@+id/gridLayoutAllAnswers"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@id/textViewTimer"
         android:columnCount="2"
         android:rowCount="2"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:visibility="invisible">
         <Button
             android:text="0"
             android:id="@+id/button0"
@@ -109,11 +100,21 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gridLayout1"
+        android:layout_below="@id/gridLayoutAllAnswers"
         android:id="@+id/textViewResult"
         android:background="@android:color/holo_blue_bright"
         android:textSize="40sp"
         android:padding="10dp"
         android:layout_margin="30dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+    <Button
+        android:text="GO!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonStart"
+        android:padding="40dp"
+        android:layout_centerInParent="true"
+        android:textSize="80sp"
+        android:backgroundTint="#ff0eff31" />
 </RelativeLayout>
